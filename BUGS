@@ -1,0 +1,16 @@
+/* $Id: BUGS,v 1.6 2003/07/20 19:04:01 te Exp $ */ 
+
+- 1-12-2002
+  Fetching non-existent document from a server will fail with 404 code and 
+  revert back to try HTTP/1.0 which will show errornous status code (0)
+
+  Never try fetching again on 404/403/40? (will have to save status code
+  somewhere.
+	
+- 10-5-2002
+  Tested on localhost, while PPP link was up, and the download was
+  serialized one after another!  Closed PPP link and tested again
+  then it was working good as expected (OpenBSD 3.0).
+
+- DOWNLOAD_RATE is not very accurate, sometimes it jumps to very
+  high rates and then back to normal (FIXED).

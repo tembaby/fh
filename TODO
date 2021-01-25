@@ -1,0 +1,53 @@
+/* $Id: TODO,v 1.10 2003/07/20 19:04:01 te Exp $ */ 
+
+1- 10-5-2002
+  Bufferd output. (1.0.4-alpha10)
+
+2- 10-5-2002
+  Real _tests_ (not on LAN/loopback) (OK)
+
+3- 10-5-2002
+  New command line argument for time benchmarking (-b). (1.0.4-alpha9)
+
+4- 11-5-2002
+  Add support for interrupting by a user signal ^C and saving information
+  about multi download.  And then resuming download again.
+  (12-6-2002)
+  Added support for resuming downloads. (1.0.5.Alpha17)
+ 
+5- 11-5-2002
+  If the http_get_r routine failed, the output file is still created.
+  (?-6-2002) (FIXED)
+
+6- 31-5-2002
+  Use persistent connection in http_get_info(). (check it out in RFC.)
+  (OK this may not help my program since it doesn't (yet) handle multiple
+  documents.) (OK this is not relevant)
+
+7- 31-5-2002
+  Save state of fetching threads, related to (4-) above. (Needed?)
+
+8- 12-6-2002
+  Proxy basic authentication.
+  (12-6-2002) Done, not tested.
+
+9- 12-6-2002
+  Directory name should contain file name on Multiple fetch.
+  (12-6-2002) Done.
+
+10- 15-6-2002
+  Command line option for desired number of threads. (OK)
+
+11- 15-6-2002
+  Proxy user name and password to be read from program.
+
+12- If single fetching failed to negotiate HTTP/1.1 it will abort and
+  never try 1.0. (FIXED)
+
+13- 1-12-2002
+  Prepare read/write/connect/init function wrappers to support SSL. (OK)
+
+14- Separating netword I/O function in separate module to be prepared for
+  SSL support. (OK)
+
+15- SSL support. (OK)

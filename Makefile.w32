@@ -1,0 +1,48 @@
+#
+# $Id: Makefile.w32,v 1.4 2002/09/09 19:11:43 te Exp $
+#
+
+OBJS		= url.obj schemes.obj misc.obj main.obj http.obj getopt.obj \
+	  	  base64.obj getthrs.obj http_r.obj ht_chnk.obj rate.obj \
+	  	  siob.obj resume.obj getline.obj ocache.obj
+TRGT		= fh
+UCFLAGS		= -D_WINDOWS -DDEBUG -DSCHEME_HTTP_HACK -DDOWNLOAD_RATE -MT \
+		  -Iwin32 -Fo$*.obj
+EXTRALIBS	= wsock32.lib
+
+CC		= cl
+LINK		= link
+INC		= -I.
+OPTIMIZE	= -O2
+CFLAGS		= -c -W3 -nologo
+
+!ifdef DEBUG
+OPTIMIZE	= -Z7
+!endif
+
+!ifdef UCFLAGS
+CFLAGS		= $(CFLAGS) $(UCFLAGS)
+!endif
+
+all		: $(TRGT).exe
+
+.c.obj		:
+	$(CC) $(CFLAGS) $(INC) $(DEFINE) $(OPTIMIZE) $<
+
+objs		: $(OBJS)
+
+$(TRGT).exe	: $(OBJS) $(RES)
+	$(LINK)						\
+		-nologo					\
+		-out:$(TRGT).exe			\
+		-map:$(TRGT).map			\
+		-machine:IX86				\
+		$(OBJS) $(EXTRALIBS)
+
+clean		: 
+	@if exist *.exe del *.exe
+	@if exist *.obj del *.obj
+	@if exist *.res del *.res
+	@if exist *.map del *.map
+
+## EOF ##

@@ -1,0 +1,457 @@
+2003-07-27 Sunday 00:08  Tamer Embaby <tsemba@menanet.net>
+
+	* url.h (1.5), url.c (1.7): Copyright year corrected
+
+2003-07-27 Sunday 00:08  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.11): v1.1.2
+
+2003-07-27 Sunday 00:07  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.16): URL parameters and query portions are now part
+	of the HTTP request URI
+
+2003-07-20 Sunday 22:13  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.15): Removed fh_ssl name when generating tarball
+
+2003-07-20 Sunday 22:10  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.14): Binrary name if "fh" again
+
+2003-07-20 Sunday 22:10  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog.orig (1.3): Removed.
+
+2003-07-20 Sunday 22:04  Tamer Embaby <tsemba@menanet.net>
+
+	* BUGS (1.6), ChangeLog (1.7), ChangeLog.orig (1.2), Makefile
+	(1.13), TODO (1.10), fh.1 (1.2), fh.h (1.10), getthrs.c (1.11),
+	ht_chnk.c (1.9), http.c (1.17), http.h (1.16), http_r.c (1.15),
+	main.c (1.13), ocache.c (1.5), rate.c (1.3), schemes.c (1.2),
+	siob.c (1.3), socket.c (1.2), url.c (1.6), url.h (1.4): Merged with
+	SSL branch
+
+2003-07-20 Sunday 21:55  Tamer Embaby <tsemba@menanet.net>
+
+	* TODO (1.9): TODO
+
+2003-07-09 Wednesday 04:11  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.9.2.8), http_r.c (1.14.2.10): Copyright year
+
+2003-07-09 Wednesday 04:09  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.14.2.9): Removed dead prototype
+
+2003-07-09 Wednesday 04:08  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.9.2.7): v1.1.1
+
+2002-12-31 Tuesday 00:23  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog (1.6.2.3): ChangeLog
+
+2002-12-31 Tuesday 00:12  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog (1.6.2.2): ChangeLog by: cvs2cl: cvs2cl.pl -r -w -U
+	/home/te/.cvs2pl.users
+
+2002-12-31 Tuesday 00:11  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog.orig (1.1.2.1): Now I use cvs2cl of (red-bean.com) to
+	automatically generate ChangeLog
+
+2002-12-31 Tuesday 00:11  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog.orig (1.1): file ChangeLog.orig was initially added on
+	branch FH-1_1_0-SSL.
+
+2002-12-30 Monday 23:48  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.1 (1.1.2.2): Manual page is fully written
+
+2002-12-30 Monday 22:24  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.1 (1.1): file fh.1 was initially added on branch FH-1_1_0-SSL.
+
+2002-12-30 Monday 22:24  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.1 (1.1.2.1): Initial CVS release for manual page.
+
+2002-12-30 Monday 22:21  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.14.2.8), ocache.c (1.4.2.1): Code cleanup
+
+2002-12-30 Monday 21:34  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.14.2.7): I was talking HTTP on HTTPS port.
+
+2002-12-30 Monday 04:11  Tamer Embaby <tsemba@menanet.net>
+
+	* BUGS (1.5.2.1), ChangeLog (1.6.2.1), Makefile (1.12.2.3), TODO
+	(1.8.2.1), fh.h (1.9.2.6), getthrs.c (1.10.2.2), ht_chnk.c
+	(1.8.2.4), http.c (1.16.2.2), http_r.c (1.14.2.6), main.c
+	(1.12.2.1), siob.c (1.2.2.2), socket.c (1.1.2.3), url.c (1.5.2.2),
+	url.h (1.3.2.2): 
+	- Added SSL support to all download type connection except
+	multi-get;   HEAD / HTTP/1.1 don't work for some unknow reason to
+	me.  - Added option to main.c to support SSL options.  - Fixed an
+	error in multi-get status thread code. (Displaying.) - Fixed error
+	in reverting back to HTTP/1.0 after failure in fetching   document
+	with HTTP/1.1 (it sometimes crashs FH).
+
+2002-12-29 Sunday 22:27  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.14.2.5): We no longer send Accept-Encoding: header
+
+2002-12-28 Saturday 02:28  Tamer Embaby <tsemba@menanet.net>
+
+	* socket.c (1.1.2.2): Will report timeout event in sio_buf
+
+2002-12-28 Saturday 02:22  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.9.2.5): Added timeout falg in sio_buf structure
+
+2002-12-28 Saturday 02:20  Tamer Embaby <tsemba@menanet.net>
+
+	* ht_chnk.c (1.8.2.3), http_r.c (1.14.2.4): Stalled connection
+	(timeout) reporting and handling
+
+2002-12-27 Friday 03:31  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.9.2.4), ht_chnk.c (1.8.2.2), http_r.c (1.14.2.3), siob.c
+	(1.2.2.1): Moved socket I/O to sock_*() calls
+
+2002-12-27 Friday 03:29  Tamer Embaby <tsemba@menanet.net>
+
+	* socket.c (1.1.2.1): Initial CVS release: Independent socket I/O
+
+2002-12-27 Friday 03:29  Tamer Embaby <tsemba@menanet.net>
+
+	* socket.c (1.1): file socket.c was initially added on branch
+	FH-1_1_0-SSL.
+
+2002-12-25 Wednesday 11:25  Tamer Embaby <tsemba@menanet.net>
+
+	* getthrs.c (1.10.2.1): Retrieve percentage support.
+
+2002-12-25 Wednesday 11:14  Tamer Embaby <tsemba@menanet.net>
+
+	* ht_chnk.c (1.8.2.1): Added download percntage.
+
+2002-12-25 Wednesday 02:56  Tamer Embaby <tsemba@menanet.net>
+
+	* schemes.c (1.1.1.2.2.1), url.c (1.5.2.1), url.h (1.3.2.1):
+	Support for HTTPS URLs.
+
+2002-12-24 Tuesday 22:36  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.14.2.2): Cosmotics
+
+2002-12-24 Tuesday 05:01  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.14.2.1): Added file percentage printing while
+	downloading.
+
+2002-12-24 Tuesday 04:59  Tamer Embaby <tsemba@menanet.net>
+
+	* rate.c (1.2.2.1): Fixed retreive rate misbehavior in conjested
+	connection.  Wrote retr_percentage() routine to print percentage of
+	downloaded file so far and total size of file (if any).
+
+2002-12-24 Tuesday 04:57  Tamer Embaby <tsemba@menanet.net>
+
+	* http.c (1.16.2.1): Added a comment on http_single() routine.
+
+2002-12-24 Tuesday 04:56  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.9.2.3): Prototyped retr_percentage()
+
+2002-12-24 Tuesday 01:29  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.12.2.2): SSL binary names, SSL defines, ready
+
+2002-12-24 Tuesday 01:27  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.9.2.2): SSL version
+
+2002-12-24 Tuesday 01:24  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.9.2.1): Added VERSION
+
+2002-12-24 Tuesday 01:24  Tamer Embaby <tsemba@menanet.net>
+
+	* http.h (1.15.2.1): Removed VERSION
+
+2002-12-24 Tuesday 01:22  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.12.2.1): Added external files importing support.
+
+2002-12-01 Sunday 04:16  Tamer Embaby <tsemba@menanet.net>
+
+	* BUGS (1.5): 404 HTTP/1.1 -> 1.0 error.
+
+2002-09-24 Tuesday 23:34  Tamer Embaby <tsemba@menanet.net>
+
+	* http.h (1.15): v1.0.6-alpha20.
+
+2002-09-24 Tuesday 23:33  Tamer Embaby <tsemba@menanet.net>
+
+	* main.c (1.12): Some typos in usage().
+
+2002-09-24 Tuesday 23:33  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.14): Print more spaces when displaying download rate.
+	 Indicate HTTP version error by incremeting tc_vererr in
+	thr_context.
+
+2002-09-24 Tuesday 23:31  Tamer Embaby <tsemba@menanet.net>
+
+	* http.h (1.14): v1.0.6-alpha20 Added tc_vererr in thr_context to
+	indicate failure in HTTP version.
+
+2002-09-24 Tuesday 23:30  Tamer Embaby <tsemba@menanet.net>
+
+	* http.c (1.16): Will try to use HTTP 1.0 if 1.1 failed for single
+	get.
+
+2002-09-24 Tuesday 23:29  Tamer Embaby <tsemba@menanet.net>
+
+	* ht_chnk.c (1.8): Print more spaces when displaying dowanload
+	rate.
+
+2002-09-24 Tuesday 23:28  Tamer Embaby <tsemba@menanet.net>
+
+	* getthrs.c (1.10): Print more spaces when displaying download
+	rate.
+
+2002-09-24 Tuesday 23:27  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog (1.6): v1.0.6-alpha20
+
+2002-09-09 Monday 22:13  Tamer Embaby <tsemba@menanet.net>
+
+	* resume.c (1.3): Shut up cc compiler warning about
+	_match_thr_line() never defined.
+
+2002-09-09 Monday 22:11  Tamer Embaby <tsemba@menanet.net>
+
+	* BUGS (1.4), ChangeLog (1.5), Makefile (1.12), Makefile.w32 (1.4),
+	getthrs.c (1.9), http.h (1.13), ocache.c (1.4), rate.c (1.2),
+	resume.c (1.2), siob.c (1.2): Reworked Windows port.  It works
+	again.
+
+2002-09-09 Monday 21:57  Tamer Embaby <tsemba@menanet.net>
+
+	* resume.c (1.1): Initial CVS import.
+
+2002-08-18 Sunday 01:10  Tamer Embaby <tsemba@menanet.net>
+
+	* http.h (1.12): Make compile date in version string.  Raised to
+	version: 1.0.5-alpha18
+
+2002-08-18 Sunday 01:09  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog (1.4): Update to version: 1.0.5-alpha18
+
+2002-08-18 Sunday 01:09  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.13): Removed left over printf.
+
+2002-08-18 Sunday 01:08  Tamer Embaby <tsemba@menanet.net>
+
+	* main.c (1.11): Fixed uninitialized pointer error (proxyu)
+
+2002-06-15 Saturday 06:53  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog (1.3), Makefile (1.11), TODO (1.7), fh.h (1.9),
+	getthrs.c (1.8), http.c (1.15), http.h (1.11), http_r.c (1.12),
+	main.c (1.10): 1.0.5-Alpha17
+
+2002-06-01 Saturday 05:38  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog (1.2), Makefile (1.10), Makefile.w32 (1.3), TODO (1.6),
+	fh.h (1.8), getthrs.c (1.7), ht_chnk.c (1.7), http.c (1.14), http.h
+	(1.10), http_r.c (1.11), ocache.c (1.3): Many changes. See
+	ChangeLog, new feature/fixed added to version 1.0.5Alpha15
+
+2002-06-01 Saturday 05:37  Tamer Embaby <tsemba@menanet.net>
+
+	* siob.c (1.1): Initial CVS import.
+
+2002-05-28 Tuesday 05:47  Tamer Embaby <tsemba@menanet.net>
+
+	* ChangeLog (1.1): Initial CVS import.
+
+2002-05-28 Tuesday 05:41  Tamer Embaby <tsemba@menanet.net>
+
+	* rate.c (1.1): Initial CVS import.
+
+2002-05-27 Monday 06:15  Tamer Embaby <tsemba@menanet.net>
+
+	* BUGS (1.3), Makefile (1.9), fh.h (1.7), getthrs.c (1.6),
+	ht_chnk.c (1.6), http.c (1.13), http.h (1.9), http_r.c (1.10),
+	main.c (1.9), url.c (1.5): - Verbose error reporting when recv()
+	errors in http_contents().  - connection speed rate, a new option
+	(-n) to disable it.  - time in seconds and in milliseconds.  -
+	http:// can be ommited from URL.
+
+2002-05-11 Saturday 06:01  Tamer Embaby <tsemba@menanet.net>
+
+	* ht_chnk.c (1.5): Removed forgotten logs.
+
+2002-05-11 Saturday 05:58  Tamer Embaby <tsemba@menanet.net>
+
+	* ht_chnk.c (1.4), http.c (1.12), http.h (1.8), http_r.c (1.9):
+	Fixed error in interpereting Header field: Transfer-Encoding that
+	prevented FH from recognizing chunked documents.  Fixed error in
+	initialization in http_contents_chunked that prevented the routine
+	from flushing its buffers to disk.
+
+2002-05-11 Saturday 05:12  Tamer Embaby <tsemba@menanet.net>
+
+	* TODO (1.5), http.c (1.11), http.h (1.7), http_r.c (1.8): Fixed
+	errors in return falues in http_get_r, fetch_XXX.
+
+2002-05-11 Saturday 02:35  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.8): CVS keyword correction.
+
+2002-05-10 Friday 23:34  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.7), TODO (1.3), fh.h (1.6), getthrs.c (1.5),
+	ht_chnk.c (1.3), http.c (1.10), http.h (1.6), http_r.c (1.7),
+	main.c (1.8), ocache.c (1.2): Added -b time benchmarking option. 
+	Added ouput cache buffer which improved download performence
+	(speed) by 40%.
+
+2002-05-10 Friday 23:17  Tamer Embaby <tsemba@menanet.net>
+
+	* ocache.c (1.1): Initial CVS import.
+
+2002-05-10 Friday 05:58  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.6), Makefile.w32 (1.2), fh.h (1.5), getopt.c (1.3),
+	getopt.h (1.3), getthrs.c (1.4), ht_chnk.c (1.2), http.c (1.9),
+	http.h (1.5), http_r.c (1.6): Added Windows multi-threaded version.
+	 Added copy_all function to merge all file chunks used in the
+	download.
+
+2002-04-29 Monday 06:06  Tamer Embaby <tsemba@menanet.net>
+
+	* getthrs.c (1.3), http_r.c (1.5), main.c (1.7): Added chunk
+	transfer encoding support.  Plus many style enhancement.
+
+2002-04-29 Monday 06:04  Tamer Embaby <tsemba@menanet.net>
+
+	* http.c (1.8): Removed unecessary headers.
+
+2002-04-29 Monday 05:58  Tamer Embaby <tsemba@menanet.net>
+
+	* http.h (1.4): Added funcs prototypes.  Added HTTP method/version.
+	 Added flags/defines.
+
+2002-04-29 Monday 05:57  Tamer Embaby <tsemba@menanet.net>
+
+	* http.c (1.7): Removed duplicated work.  Now uses thread context.
+
+2002-04-29 Monday 05:56  Tamer Embaby <tsemba@menanet.net>
+
+	* getopt.h (1.2), getopt.c (1.2): Changed to BSD getopt.
+
+2002-04-29 Monday 05:55  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.5): Added header dependency.  Added tar ball.
+
+2002-04-27 Saturday 06:02  Tamer Embaby <tsemba@menanet.net>
+
+	* ht_chnk.c (1.1): Initail CVS import for getting docment of
+	Transfer-Encoding: header field.
+
+2002-04-24 Wednesday 06:34  Tamer Embaby <tsemba@menanet.net>
+
+	* main.c (1.6): Some minor bueitifications.  Fixed error in
+	handling -s option.
+
+2002-04-11 Thursday 20:55  Tamer Embaby <tsemba@menanet.net>
+
+	* main.c (1.5): Changed usage() to cope with multithreading
+	changes.
+
+2002-04-11 Thursday 20:50  Tamer Embaby <tsemba@menanet.net>
+
+	* getthrs.c (1.2), http.c (1.6), http.h (1.3), http_r.c (1.4),
+	main.c (1.4): First multi threaded release.
+
+2002-04-11 Thursday 20:47  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.4): I don't remmeber.
+
+2002-04-11 Thursday 03:44  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.3): Next release will try to split htt_fetch_file to
+	two functions.	One for headers, and on for body.
+
+2002-04-10 Wednesday 04:12  Tamer Embaby <tsemba@menanet.net>
+
+	* http_r.c (1.2): Added function init_http_request().  Not tested
+	yet.
+
+2002-04-10 Wednesday 04:11  Tamer Embaby <tsemba@menanet.net>
+
+	* http.h (1.2): Added defines for HTTP methods.
+
+2002-04-08 Monday 03:56  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.3), base64.c (1.3), fh.h (1.4), http.c (1.5), main.c
+	(1.3), url.c (1.4), url.h (1.3): First CVS version of the
+	multi-threaded FH.
+
+2002-04-08 Monday 03:52  Tamer Embaby <tsemba@menanet.net>
+
+	* getthrs.c (1.1), http_r.c (1.1): Initial revision
+
+2002-04-08 Monday 03:52  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.1.1.2), base64.c (1.1.1.2), fh.h (1.1.1.2), getthrs.c
+	(1.1.1.1), http.c (1.1.1.2), http.h (1.1.1.2), http_r.c (1.1.1.1),
+	main.c (1.1.1.2), misc.c (1.1.1.2), schemes.c (1.1.1.2), url.c
+	(1.1.1.2), url.h (1.1.1.2): Import of multi threaded version.
+
+2002-02-11 Monday 03:13  Tamer Embaby <tsemba@menanet.net>
+
+	* http.c (1.4): Output file name is now hostname-file.
+
+2002-02-11 Monday 02:25  Tamer Embaby <tsemba@menanet.net>
+
+	* http.c (1.3): Minor fixes.
+
+2002-02-11 Monday 02:06  Tamer Embaby <tsemba@menanet.net>
+
+	* url.c (1.3), url.h (1.2): Some minor error fixes.
+
+2002-02-11 Monday 01:52  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.2), base64.c (1.2), fh.h (1.3), http.c (1.2), main.c
+	(1.2), url.c (1.2): Fixed UNIX compile time errors.
+
+2002-02-11 Monday 01:16  Tamer Embaby <tsemba@menanet.net>
+
+	* fh.h (1.2): Added BSD license.
+
+2002-02-11 Monday 01:15  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.1), Makefile.w32 (1.1), base64.c (1.1), fh.h (1.1),
+	getopt.c (1.1), getopt.h (1.1), http.c (1.1), http.h (1.1), main.c
+	(1.1), misc.c (1.1), schemes.c (1.1), url.c (1.1), url.h (1.1):
+	Initial revision
+
+2002-02-11 Monday 01:15  Tamer Embaby <tsemba@menanet.net>
+
+	* Makefile (1.1.1.1), Makefile.w32 (1.1.1.1), base64.c (1.1.1.1),
+	fh.h (1.1.1.1), getopt.c (1.1.1.1), getopt.h (1.1.1.1), http.c
+	(1.1.1.1), http.h (1.1.1.1), main.c (1.1.1.1), misc.c (1.1.1.1),
+	schemes.c (1.1.1.1), url.c (1.1.1.1), url.h (1.1.1.1): Initial CVS
+	import.
+

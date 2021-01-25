@@ -1,0 +1,136 @@
+.\" $Id: fh.1,v 1.2 2003/07/20 19:04:01 te Exp $ 
+
+.\" Copyright (c) 2002 Tamer Embaby <tsemba@menanet.net>
+.\" All rights reserved.
+.\" 
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. The name of the author may not be used to endorse or promote products
+.\"    derived from this software without specific prior written permission.
+.\" 
+.\" THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+.\" INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+.\" AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+.\" THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+.\" EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+.\" PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+.\" OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+.\" WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+.\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+.\" ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+.Dd December 30, 2002
+.Dt FH 1
+
+.Sh NAME
+.Nm fh
+.Nd Download files using
+.Ar HTTP/1.0 , HTTP/1.1 , HTTPS 
+protocols.
+
+.Sh SYNOPSIS
+.Nm fh
+.Ar [options] URL
+
+.Sh DESCRIPTION
+.Nm
+is a multi-threaded
+.Ar HTTP/1.0 , HTTP/1.1 , HTTPS
+file downloader, which can handle multiple simultanious dowanloads of the
+same remote file to speed up download time.
+
+By default
+.Nm
+download requested file over one download channel, but it can be requested
+to open multiple channels with the
+.Ar -m
+option.
+
+.Nm
+supports 
+.Ar SSL
+connections and remote server authentication.  It also can use a list of
+trusted
+.Ar CA's
+for the use of server authentication.
+
+.Nm 
+can download chunk encoded HTTP objects.  And can handle connections behind
+.Ar HTTP proxies
+with or without proxy authentication.
+
+When working with multiple-connection downloads,
+.Nm
+supports resuming previous broken sessions and starts downloading from
+the point where the connections went down.  
+.Nm
+decides the number of connections to open based on the size of the remote
+file requested.
+
+.Nm
+doesn't understand the nature of the files being downloaded so it cannot
+follow links in hypertext documents.
+
+.Sh OPTIONS
+.Bl -tag -width XXXXXXXXXXX
+.It Ar -p <URL>
+specify proxy server in the form: http://user:password@host:port.
+.It Ar -m            
+start multiple-connection download session.
+.It Ar -d
+Run in debugging mode.  Will print a lot of information.
+.It Ar -s
+Disable download status reporting (per connection activity) in 
+multiple-connection session.
+.It Ar -v
+Print version number and exit.
+.It Ar -b
+Enable benchmarck reporting.  Will display time consumed in downloading.
+.It Ar -n
+Do not show download speed indicator.
+.It Ar -t <number>
+Open
+.Ar number 
+of connections to download.
+.It Ar -M <method>
+Specify 
+.Ar SSL
+method to use.  Available methods:
+.Bl -dash -compact
+.It 
+.Ar <sslv2>
+SSL version 2
+.It 
+.Ar <sslv3>
+SSL version 3
+.It 
+.Ar <tlsv1>
+TLS version 1
+.El
+.It Ar -A 
+Authenticate remote peer using
+.Ar server authentication.
+Will require using
+.Ar -F
+flag to specify list of trusted CA's
+.It Ar -F <file>
+Path to file containing trusted CA list.
+.El
+
+.Sh AUTHORS
+Tamer Embaby <tsemba@menanet.net>.  (C) 2001, 2002, 2003.
+.Pp
+Program is distributed under the
+.Ar BSD
+style license.
+
+.Sh BUGS
+Report bugs to 
+.Ar tsemba@menanet.net.
+Some parts of the program is not very well tested.
